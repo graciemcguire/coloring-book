@@ -7,7 +7,8 @@ const PortraitMain = props => {
   const { image, toggle } = props
   return(
     <Fragment>
-      <h1 onClick={ toggle }>{ image.name }</h1>
+      <h1>{ image.name }</h1>
+      <img alt={ image.name } src={ image.image } onClick={ toggle }/> 
       <ColorSelect image={ image }/>
     </Fragment>
   )

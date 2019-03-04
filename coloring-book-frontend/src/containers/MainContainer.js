@@ -5,21 +5,24 @@ import PortraitMain from './PortraitMain'
 
 export default class MainContainer extends Component {
   state = {
+    user: null,
     images: [],
     current: {},
     searchTerm: ''
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3001/erics')
+    fetch('http://localhost:3001/api/v1/images')
     .then(r => r.json())
     .then(images => this.setState({ images }))
+    fetch('http://localhost:3001/api/v1/users/1')
   }
 
   clickHandler = current => { this.setState({ current }) }
 
   filterImages = () => {
-    return this.state.images.filter(image => image.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+    return this.state.images.filter(image =>
+      image.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
   }
 
   changeHandler = event => {
@@ -30,13 +33,20 @@ export default class MainContainer extends Component {
   toggle = () => this.setState({ current: {} })
 
   render(){
+    console.log(this.state);
     const { current, images } = this.state
     return(
       <Fragment>
         <Header />
         { !current.id
-        ? <PortraitGallery images={ this.filterImages() } clickHandler={ this.clickHandler } changeHandler={ this.changeHandler }/>
-        : <PortraitMain key={ current.id } image={ current } toggle={ this.toggle }/> }
+        ? <PortraitGallery
+        images={ this.filterImages() }
+        clickHandler={ this.clickHandler }
+        changeHandler={ this.changeHandler }/>
+        : <PortraitMain
+        key={ current.id }
+        image={ current }
+        toggle={ this.toggle }/> }
       </Fragment>
     )
   }
