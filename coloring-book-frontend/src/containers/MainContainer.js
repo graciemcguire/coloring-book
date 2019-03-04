@@ -11,7 +11,7 @@ export default class MainContainer extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3001/erics')
+    fetch('http://localhost:3001/ap1/v1/images')
     .then(r => r.json())
     .then(images => this.setState({ images }))
   }
