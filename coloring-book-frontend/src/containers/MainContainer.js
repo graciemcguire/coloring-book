@@ -16,6 +16,8 @@ export default class MainContainer extends Component {
     .then(r => r.json())
     .then(images => this.setState({ images }))
     fetch('http://localhost:3001/api/v1/users/1')
+    .then(r => r.json())
+    .then(user => this.setState({ user }))
   }
 
   clickHandler = current => { this.setState({ current }) }
@@ -33,7 +35,6 @@ export default class MainContainer extends Component {
   toggle = () => this.setState({ current: {} })
 
   render(){
-    console.log(this.state);
     const { current, images } = this.state
     return(
       <Fragment>

@@ -20,15 +20,32 @@
   color: cyan;
 }
 
-.App-link {
-  color: #61dafb;
+.color-button-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #F4F4F4;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-/* 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(10deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+
+.color-cards {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  border: 10px;
+  border-color: #000000;
+  align-items: center;
+  margin: 20px;
+}
+
+.portrait-cards {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+}

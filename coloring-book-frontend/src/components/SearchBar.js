@@ -1,17 +1,17 @@
-import React, { Component, Fragment } from 'react'
+import React from 'react'
 
-export default class SearchBar extends Component {
-  render(){
-    return(
-      <form>
-        <input
+const SearchBar = props => {
+  const { value, changeHandler } = props
+  return(
+    <form>
+      <input
         className="form"
         type="text"
-        value={ this.props.value }
-        onChange={ this.props.changeHandler }
+        value={ value }
+        onChange={ changeHandler }
         placeholder= 'Search Images'
-        />
-      </form>
-    )
-  }
+      />
+    </form>
+  )
 }
+ export default SearchBar;
