@@ -3,7 +3,7 @@ import React from 'react'
 const SearchBar = props => {
   const { value, changeHandler } = props
   return(
-    <form>
+    <form className='search-container'>
       <input
         className="form"
         type="text"

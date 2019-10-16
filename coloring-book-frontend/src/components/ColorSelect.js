@@ -24,8 +24,8 @@ export default class ColorSelect extends Component {
   render(){
     return(
       <div className= 'color-button-div'>
-        <h2>color town</h2>
-        { this.createColorButtons() }
+        <div className='search-container'>  <h2>color town</h2> </div>
+          { this.createColorButtons() }
       </div>
     )
   }

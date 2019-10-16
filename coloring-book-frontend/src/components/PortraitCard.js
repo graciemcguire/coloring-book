@@ -6,7 +6,10 @@ const PortraitCard = props => {
   return (
     <div className='portrait-cards'>
       <h1>{ image.name }</h1>
-      <img alt={ image.name } src={ image.image } onClick={ () => clickHandler(image) }/>
+      <img
+      alt={ image.name } src={ image.image }
+      onClick={ () => clickHandler(image) }
+      className='portrait-card-images'/>
     </div>
   )
 }

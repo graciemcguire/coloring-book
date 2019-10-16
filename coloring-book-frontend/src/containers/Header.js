@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
 
-const Header = () => {
+const Header = props => {
+  console.log(props.user);
   return(
-    <h1><center>yessir</center></h1>
+    <div>
+    <h3 className='log-in'>{ !props.user ?
+      <button className='btn'>Log in?</button>
+      : <button className='btn'>Logout {props.user.username}?</button> }</h3>
+      <div>
+        <h1><center>color me unimpressed</center></h1>
+        <h1><center>¯\_(ツ)_/¯</center></h1>
+      </div>
+    </div>
   )
 }
 

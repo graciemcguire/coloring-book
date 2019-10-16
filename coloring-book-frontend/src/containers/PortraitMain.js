@@ -21,14 +21,18 @@ export default class PortraitMain extends Component {
     console.log(this.state);
     return(
       <Fragment>
-        <div ref="lpo">
-        <h1 ref='kok' onClick={ toggle }>{ image.name }</h1>
-        <h1 onClick={() =>  Array.from(this.refs.imgObj.contentDocument.children[0].children).map(child => (
-          child.addEventListener('click', () => child.style.fill=this.state.current))) }>clicker</h1>
-        <div>
-          <object ref="imgObj" data={ image.image } type="image/svg+xml" onClick={() => console.log('e.target')}/>
+      <button className='btn'onClick={ toggle }>Go back to Gallery?</button>
+      <button className='btn'
+      onClick={() =>  Array.from(this.refs.imgObj.contentDocument.children[0].children).map(child => (
+        child.addEventListener('click', () => child.style.fill=this.state.current))) }>start a colorin'!</button>
+        <div className='main'>
+          <div className= 'main-image'>
+              <object ref="imgObj" data={ image.image } type="image/svg+xml" onClick={() => console.log('e.target')}/>
+          </div>
         </div>
-        <ColorSelect image={ image } clickHandler={ this.clickHandler }/>
+
+        <div>
+          <ColorSelect image={ image } clickHandler={ this.clickHandler }/>
         </div>
       </Fragment>
     )

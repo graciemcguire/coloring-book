@@ -35,10 +35,10 @@ export default class MainContainer extends Component {
   toggle = () => this.setState({ current: {} })
 
   render(){
-    const { current, images } = this.state
+    const { current, images, user } = this.state
     return(
       <Fragment>
-        <Header />
+        <Header user={ user }/>
         { !current.id
         ? <PortraitGallery
         images={ this.filterImages() }

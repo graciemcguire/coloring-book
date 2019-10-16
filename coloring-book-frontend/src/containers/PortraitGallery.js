@@ -9,8 +9,11 @@ const PortraitGallery = props => {
   return(
     <div>
       <SearchBar changeHandler={ changeHandler }/>
-      <h1>gallery</h1>
+
+      <h1 className='search-container'>gallery</h1>
+    <div className= 'container'>
       { images.map(image => <PortraitCard key={ image.id } image={ image } clickHandler={ clickHandler }/>) }
+    </div>
     </div>
   )
 }

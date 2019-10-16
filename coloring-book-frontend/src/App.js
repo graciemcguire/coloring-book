@@ -6,10 +6,13 @@ class App extends Component {
   state = {
     user: {}
   }
-    
+
+
   render() {
     return (
+      <div className='root'>
       <MainContainer />
+      </div>
     );
   }
 }

@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-    Image.create(name: 'abstract-6', image: 'images/this-GUY.svg')
-    Image.create(name: 'abstract-2', image: 'images/abstract-2.svg')
-    Image.create(name: 'abstract-3', image:'images/abstract-3.svg')
-    Image.create(name: 'abstract-5', image: 'images/abstract-5.svg')
-    Image.create(name: 'abstract-4', image: 'images/abstract-4.svg')
-    Image.create(name: 'abstract-1', image: 'images/abstract-1.svg')
+    Image.create(name: 'face', image: 'images/this-GUY.svg')
+    Image.create(name: 'simple mandala', image: 'images/abstract-2.svg')
+    Image.create(name: 'abstract cells', image:'images/abstract-3.svg')
+    Image.create(name: 'abstract pattern', image: 'images/abstract-5.svg')
+    Image.create(name: 'abstract rug', image: 'images/abstract-4.svg')
+    Image.create(name: 'grandmas coaster', image: 'images/abstract-1.svg')
 
 
     User.create(username: 'gracie', password: 'test')
